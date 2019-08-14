@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revgex", "Revgex\Revgex.csproj", "{444B4DB7-3D90-4BFD-AF5E-C91C840B1F9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RevgexTester", "RevgexTester\RevgexTester.csproj", "{AA2E931D-9941-4F1A-9C09-3B194BADEA30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{444B4DB7-3D90-4BFD-AF5E-C91C840B1F9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{444B4DB7-3D90-4BFD-AF5E-C91C840B1F9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{444B4DB7-3D90-4BFD-AF5E-C91C840B1F9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{444B4DB7-3D90-4BFD-AF5E-C91C840B1F9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA2E931D-9941-4F1A-9C09-3B194BADEA30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA2E931D-9941-4F1A-9C09-3B194BADEA30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA2E931D-9941-4F1A-9C09-3B194BADEA30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA2E931D-9941-4F1A-9C09-3B194BADEA30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4EB3214-2D9D-4BD4-AE01-71A64686A876}
+	EndGlobalSection
+EndGlobal
