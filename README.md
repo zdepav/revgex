@@ -2,7 +2,7 @@
 
 A simple .NET library that can generate random strings using a language similar to regular expressions
 
-See [Usage.md](Usage.md) for details
+See [USAGE.md](USAGE.md) for details
 
 # RevgexTester
 
