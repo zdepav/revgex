@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Revgex", "Revgex\Revgex.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RevgexTester", "RevgexTester\RevgexTester.csproj", "{AA2E931D-9941-4F1A-9C09-3B194BADEA30}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{09B5F2DD-3606-4DC3-9885-28EA753021ED}"
+	ProjectSection(SolutionItems) = preProject
+		Usage.md = Usage.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
