@@ -74,9 +74,9 @@
             this.backupTimer = new System.Windows.Forms.Timer(this.components);
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.outputSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.licencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.githubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.codeEditor)).BeginInit();
             this.panel2.SuspendLayout();
@@ -88,7 +88,6 @@
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.filter)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -98,7 +97,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(448, 284);
+            this.panel1.Size = new System.Drawing.Size(448, 306);
             this.panel1.TabIndex = 0;
             // 
             // codeEditor
@@ -125,7 +124,6 @@
             this.codeEditor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.codeEditor.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.codeEditor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.codeEditor.Font = new System.Drawing.Font("Courier New", 9.75F);
             this.codeEditor.IsReplaceMode = false;
             this.codeEditor.LeftBracket = '(';
             this.codeEditor.LeftBracket2 = '[';
@@ -136,7 +134,7 @@
             this.codeEditor.RightBracket2 = ']';
             this.codeEditor.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             this.codeEditor.ServiceColors = ((FastColoredTextBoxNS.ServiceColors)(resources.GetObject("codeEditor.ServiceColors")));
-            this.codeEditor.Size = new System.Drawing.Size(448, 260);
+            this.codeEditor.Size = new System.Drawing.Size(448, 282);
             this.codeEditor.TabIndex = 1;
             this.codeEditor.Zoom = 100;
             this.codeEditor.TextChangedDelayed += new System.EventHandler<FastColoredTextBoxNS.TextChangedEventArgs>(this.codeEditor_TextChangedDelayed);
@@ -161,7 +159,7 @@
             this.panel2.Controls.Add(this.generateButton);
             this.panel2.Controls.Add(this.generationCount);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 284);
+            this.panel2.Location = new System.Drawing.Point(0, 306);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(448, 111);
             this.panel2.TabIndex = 0;
@@ -288,7 +286,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.copyButton);
             this.splitContainer1.Panel2.Controls.Add(this.label3);
             this.splitContainer1.Panel2MinSize = 192;
-            this.splitContainer1.Size = new System.Drawing.Size(704, 395);
+            this.splitContainer1.Size = new System.Drawing.Size(704, 417);
             this.splitContainer1.SplitterDistance = 448;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -300,14 +298,14 @@
             this.output.Location = new System.Drawing.Point(0, 24);
             this.output.Name = "output";
             this.output.ReadOnly = true;
-            this.output.Size = new System.Drawing.Size(252, 278);
+            this.output.Size = new System.Drawing.Size(252, 300);
             this.output.TabIndex = 3;
             this.output.Text = "";
             // 
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label2.Location = new System.Drawing.Point(0, 302);
+            this.label2.Location = new System.Drawing.Point(0, 324);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(252, 24);
             this.label2.TabIndex = 6;
@@ -340,11 +338,12 @@
             this.filter.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.filter.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.filter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.filter.Font = new System.Drawing.Font("Courier New", 9.75F);
             this.filter.Hotkeys = resources.GetString("filter.Hotkeys");
             this.filter.IsReplaceMode = false;
             this.filter.LeftBracket = '(';
             this.filter.LeftBracket2 = '[';
-            this.filter.Location = new System.Drawing.Point(0, 326);
+            this.filter.Location = new System.Drawing.Point(0, 348);
             this.filter.Multiline = false;
             this.filter.Name = "filter";
             this.filter.Paddings = new System.Windows.Forms.Padding(0);
@@ -362,7 +361,7 @@
             // copyButton
             // 
             this.copyButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.copyButton.Location = new System.Drawing.Point(0, 363);
+            this.copyButton.Location = new System.Drawing.Point(0, 385);
             this.copyButton.Name = "copyButton";
             this.copyButton.Size = new System.Drawing.Size(252, 32);
             this.copyButton.TabIndex = 4;
@@ -382,7 +381,8 @@
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
             this.optionsToolStripMenuItem,
-            this.outputToolStripMenuItem});
+            this.outputToolStripMenuItem,
+            this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(704, 24);
@@ -624,31 +624,28 @@
             this.outputSaveFileDialog.Filter = "Data file|*.dat|Text file|*.txt|Any file|*.*";
             this.outputSaveFileDialog.Title = "Save Output";
             // 
-            // statusStrip1
+            // helpToolStripMenuItem
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripStatusLabel2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 419);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(704, 22);
-            this.statusStrip1.TabIndex = 3;
-            this.statusStrip1.Text = "statusStrip1";
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.licencesToolStripMenuItem,
+            this.githubToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
             // 
-            // toolStripStatusLabel1
+            // licencesToolStripMenuItem
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(103, 17);
-            this.toolStripStatusLabel1.Text = "Soutěžní verze pro";
+            this.licencesToolStripMenuItem.Name = "licencesToolStripMenuItem";
+            this.licencesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.licencesToolStripMenuItem.Text = "Licences";
+            this.licencesToolStripMenuItem.Click += new System.EventHandler(this.licencesToolStripMenuItem_Click);
             // 
-            // toolStripStatusLabel2
+            // githubToolStripMenuItem
             // 
-            this.toolStripStatusLabel2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline);
-            this.toolStripStatusLabel2.ForeColor = System.Drawing.Color.Blue;
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(134, 17);
-            this.toolStripStatusLabel2.Text = "ITnetwork summer 2018";
-            this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
+            this.githubToolStripMenuItem.Name = "githubToolStripMenuItem";
+            this.githubToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.githubToolStripMenuItem.Text = "Github";
+            this.githubToolStripMenuItem.Click += new System.EventHandler(this.githubToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -656,7 +653,6 @@
             this.ClientSize = new System.Drawing.Size(704, 441);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.statusStrip1);
             this.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(720, 480);
@@ -677,8 +673,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.filter)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -735,9 +729,9 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.SaveFileDialog outputSaveFileDialog;
         private System.Windows.Forms.ToolStripMenuItem separatorStyleToolStripMenuItem;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem licencesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem githubToolStripMenuItem;
     }
 }
 

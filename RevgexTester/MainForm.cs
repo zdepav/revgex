@@ -330,8 +330,14 @@ namespace RevgexTester {
             }
         }
 
-        private void toolStripStatusLabel2_Click(object sender, EventArgs e) =>
-            Process.Start("https://www.itnetwork.cz/nezarazene/itnetwork-summer-2018");
+        private void licencesToolStripMenuItem_Click(object sender, EventArgs e) {
+            using (var ls = new Licenses()) {
+                ls.ShowDialog();
+            }
+        }
+
+        private void githubToolStripMenuItem_Click(object sender, EventArgs e) =>
+            Process.Start("https://github.com/zdepav/revgex");
 
         private void RefreshOutputView() {
             var rtb = new RichTextBox { Font = output.Font };
